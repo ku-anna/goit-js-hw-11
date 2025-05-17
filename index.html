@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GoIT JS homework 11</title>
     <script type="module" crossorigin src="/goit-js-hw-11/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/index-hTz0u8V4.css">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-BLPZKqeQ.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/vendor-CX4EDM7x.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/index-OJO5Ei41.css">
   </head>
   <body>
     <main>
-      <form class="form">
+      <form class="form" id="search-form">
         <label>
           <input
             type="text"
@@ -21,24 +23,9 @@
         </label>
         <button type="submit">Search</button>
       </form>
+      <div class="loader hidden"></div>
+      <div class="gallery"></div>
     </main>
-
-    <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made by
-      <a
-        class="footer-link"
-        href="https://github.com/ku-anna"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Anna Kubareva
-      </a>
-    </p>
-  </div>
-</footer>
-
 
   </body>
 </html>
