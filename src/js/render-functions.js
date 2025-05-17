@@ -12,10 +12,26 @@ const lightbox = new SimpleLightbox('.gallery a', {
 export function createGallery(images) {
   const markup = images
     .map(
-      img => `
-    <a class="gallery__item" href="${img.largeImageURL}">
-      <img class="gallery__image" src="${img.webformatURL}" alt="${img.tags}" />
-    </a>
+      ({
+        webformatURL,
+        largeImageURL,
+        tags,
+        likes,
+        views,
+        comments,
+        downloads,
+      }) => `
+    <div class="photo-card">
+      <a class="gallery__item" href="${largeImageURL}">
+        <img class="gallery__image" src="${webformatURL}" alt="${tags}" loading="lazy" />
+      </a>
+      <div class="info">
+        <p><b>Likes:</b> ${likes}</p>
+        <p><b>Views:</b> ${views}</p>
+        <p><b>Comments:</b> ${comments}</p>
+        <p><b>Downloads:</b> ${downloads}</p>
+      </div>
+    </div>
   `
     )
     .join('');
@@ -29,9 +45,9 @@ export function clearGallery() {
 }
 
 export function showLoader() {
-  loader.classList.add('hidden');
+  loader.classList.remove('hidden');
 }
 
 export function hideLoader() {
-  loader.classList.remove('hidden');
+  loader.classList.add('hidden');
 }
