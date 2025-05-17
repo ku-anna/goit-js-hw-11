@@ -9,7 +9,7 @@
   </head>
   <body>
     <main>
-      <form class="form">
+      <form class="form" id="search-form">
         <label>
           <input
             type="text"
@@ -20,12 +20,10 @@
         </label>
         <button type="submit">Search</button>
       </form>
+      <div class="loader hidden"></div>
+      <div class="gallery"></div>
     </main>
 
-    <load src="./partials/footer.html" />
-
     <script type="module" src="./main.js"></script>
-    <script type="module" src="./js/pixabay-api.js"></script>
-    <script type="module" src="./js/render-functions.js"></script>
   </body>
 </html>
