@@ -36,7 +36,8 @@ form.addEventListener('submit', async event => {
     if (images.length === 0) {
       iziToast.info({
         title: 'No results',
-        message: 'No images found for this query.',
+        message:
+          'Sorry, there are no images matching your search query. Please try again!',
         position: 'topRight',
       });
     } else {
@@ -45,7 +46,8 @@ form.addEventListener('submit', async event => {
   } catch (error) {
     iziToast.error({
       title: 'Error',
-      message: 'Failed to fetch images. Please try again later.',
+      message:
+        'Sorry, there are no images matching your search query. Please try again!',
       position: 'topRight',
     });
     console.error(error);
